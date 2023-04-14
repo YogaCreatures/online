@@ -2,6 +2,7 @@
 
 // Replace this with your own email address
 $to = 'hiren.websitedeveloper@gmail.com';
+//$to = 'info@migrantgroup.com';
 
 function url(){
   return sprintf(
@@ -15,8 +16,8 @@ if($_POST) {
 
    $name = trim(stripslashes($_POST['name']));
    $email = trim(stripslashes($_POST['email']));
-   $phone = trim(stripslashes($_POST['phone']));
-   $subject = trim(stripslashes($_POST['subject']));
+   $mobileno = trim(stripslashes($_POST['mobile']));
+   $subjectmsg = trim(stripslashes($_POST['subject']));
    $contact_message = trim(stripslashes($_POST['message']));
 
    
@@ -24,10 +25,11 @@ if($_POST) {
 
    // Set Message
    $message .= "Email from: " . $name . "<br />";
-	$message .= "Email address: " . $email . "<br />";
-	$message .= "phone Number: " . $phone . "<br />";
-   $message .= "Message: ";
-   $message .= nl2br($contact_message);
+   $message .= "Email address: " . $email . "<br />";
+   $message .= "Phone Number: " . $mobileno . "<br />";
+   $message .= "Subject: " . $subjectmsg . "<br />";
+   $message .= "Message: ". $contact_message . "<br />";
+   //$message .= nl2br($contact_message);
    $message .= "<br /> ----- <br /> This email was sent from your site " . url() . " contact form. <br />";
 
    // Set From: header

@@ -857,6 +857,49 @@ textarea {
     background-color: var(--e-global-color-white);
 	transition: all 0.4s cubic-bezier(0.12, 0, 0.38, 1) 0s;
 }
+
+
+.get_in_touch_content input[type=submit] {
+    width: 200px;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 500;
+    padding: 24px 40px;
+    text-align: center;
+    color: var(--e-global-color-white);
+    display: inline-block;
+    background-color: var(--e-global-color-secondary);
+    border-radius: 35px 0px 35px 0px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    position: relative;
+}
+.get_in_touch_content input[type=submit]:hover {
+    color: var(--e-global-color-secondary);
+    background-color: var(--e-global-color-white);
+    transform: translateY(-10px);
+}
+.get_in_touch_content input[type=submit]:hover:before {
+	left: 0%;
+	right: auto;
+	width: 100%;
+}
+.get_in_touch_content input[type=submit]:before {
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 0px;
+	z-index: -1;
+	content: '';
+    color: var(--e-global-color-secondary);
+    background-color: var(--e-global-color-white);
+	transition: all 0.4s cubic-bezier(0.12, 0, 0.38, 1) 0s;
+}
+
 .get_in_touch_section .get_in_touch_shape{
     position: absolute;
     bottom: 210px;
