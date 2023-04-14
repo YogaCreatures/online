@@ -11,18 +11,22 @@ $(function() {
     });
   });
 
-// document.onkeydown = function(e) {
-//     if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {
-//         //Alt+c, Alt+v will also be disabled sadly.
-//         alert('not allowed');
-//     }
-//     return false;
-// };
+document.onkeydown = function(e) {
+  if (e.ctrlKey && 
+      (e.keyCode === 67 || 
+       e.keyCode === 86 || 
+       e.keyCode === 85 || 
+       e.keyCode === 117)) {
+      alert('not allowed');
+      return false;
+  } else {
+      return true;
+  }
+};
 // disable Ctrl+U using Javascript
 
 $(document).keydown(function (event) {
-  // if (event.keyCode == 123 ) { // Prevent F12
-    if (event.keyCode && (event.keyCode === 123 || event.keyCode === 67 || event.keyCode === 86 || event.keyCode === 85 || event.keyCode === 117)) { // Prevent F12
+  if (event.keyCode == 123 ) { // Prevent F12
       alert('not allowed');
         return false;
     } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
