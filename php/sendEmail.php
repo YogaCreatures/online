@@ -13,21 +13,21 @@ function url(){
 
 if($_POST) {
 
-   $fname = trim(stripslashes($_POST['fname']));
-   $lname = trim(stripslashes($_POST['lname']));
-   $phonenum = trim(stripslashes($_POST['phonenum']));
-   $emailaddrs = trim(stripslashes($_POST['emailaddrs']));
-   $comment = trim(stripslashes($_POST['comment']));
+   $name = trim(stripslashes($_POST['name']));
+   $email = trim(stripslashes($_POST['email']));
+   $phone = trim(stripslashes($_POST['phone']));
+   $subject = trim(stripslashes($_POST['subject']));
+   $contact_message = trim(stripslashes($_POST['message']));
 
    
 	if ($subject == '') { $subject = "Contact Form Submission from migrantgroup"; }
 
    // Set Message
-   $message .= "Email from: " . $fname . " " . $lname . "<br />";
-	$message .= "Phone Number: " . $phonenum . "<br />";
-	$message .= "Email address: " . $emailaddrs . "<br />";
+   $message .= "Email from: " . $name . "<br />";
+	$message .= "Email address: " . $email . "<br />";
+	$message .= "phone Number: " . $phone . "<br />";
    $message .= "Message: ";
-   $message .= nl2br($comment);
+   $message .= nl2br($contact_message);
    $message .= "<br /> ----- <br /> This email was sent from your site " . url() . " contact form. <br />";
 
    // Set From: header

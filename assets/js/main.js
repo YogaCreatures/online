@@ -8,24 +8,24 @@
 		if ($('#contactForm').length > 0 ) {
 			$( "#contactForm" ).validate( {
 				rules: {
-					fname: "required",
-					lname: "required",
-					phonenum: "required",
-					emailaddrs: {
+					name: "required",
+					phone: "required",
+					subject: "required",
+					email: {
 						required: true,
 						email: true
 					},
-					comment: {
+					message: {
 						required: true,
 						minlength: 5
 					}
 				},
 				messages: {
-					fname: "Please enter your First Name",
-					lname: "Please enter your Last Name",
-					phonenum: "Please enter your Phone Number",
-					emailaddrs: "Please enter a valid email address",
-					comment: "Please enter a message"
+					name: "Please enter your name",
+					phone: "Please enter your phone Number",
+					subject: "Please enter your subject",
+					email: "Please enter a valid email address",
+					message: "Please enter a message"
 				},
 				/* submit via ajax */
 				
