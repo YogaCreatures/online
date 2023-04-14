@@ -2198,6 +2198,9 @@ header{position: fixed;z-index: 9;width: 100%;background: #764979;}
 #Home{padding-top: 150px;}
 .navbar-collapse{flex-grow: 0 !important;}
 .navbar {justify-content: space-between !important;}
+#contactForm label.error {color: red;font-size: 12px;position: relative;top: -16px;}
+#contactForm textarea + label.error {position: relative;top: -42px;}
+.get_in_touch_content #contactForm .form_style + label.error {left: -18px;}
 
 @media screen and (min-width: 0) and (max-width: 991px){
     .main_header {
@@ -2208,5 +2211,20 @@ header{position: fixed;z-index: 9;width: 100%;background: #764979;}
     }
     .aboutus_line_wrapper .purple_line {
         left: 10px !important;
+    }
+    .get_in_touch_content {
+        text-align: left !important;
+    }
+    .get_in_touch_content #contactForm .form_style + label.error {
+        left: 0 !important;
+    }
+    #contactForm label.error {
+        top: -12px !important;
+    }
+    #contactForm textarea + label.error {
+        top: -26px !important;
+    }
+    .get_in_touch_section:before {
+        height: 50% !important;
     }
 }
