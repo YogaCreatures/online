@@ -39,14 +39,6 @@
     <link href="assets/css/special-classes.css" rel="stylesheet" type="text/css">
     <link href="https://unpkg.com/aos%402.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("EMkHPSRPWx5VS6pic");
-        })();
-    </script>
 </head>
 
 <body>
@@ -352,38 +344,40 @@
                 <div class="get_in_touch_content">
                     <h5>Get in touch</h5>
                     <h2>Get a Free Consultation Now</h2>
-                    <form>
+                    <form method="POST" id="contactForm" name="contactForm">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="form-group mb-0">    
-                                <input type="text" name="name" id="name" class="form-control" placeholder="Name"> 
+                                <input type="text" name="name" class="form-control" placeholder="Name"> 
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="form-group mb-0">
-                                <input type="text" name="mobile" id="mobile" class="form-control form_style" placeholder="Phone">
+                                <input type="text" name="mobile" class="form-control form_style" placeholder="Phone">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="form-group mb-0">    
-                                    <input type="text" name="email" id="email" class="form-control" placeholder="Email"> 
+                                    <input type="text" name="email" class="form-control" placeholder="Email"> 
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="form-group mb-0">    
-                                    <input type="text" name="subject" id="subject" class="form-control form_style" placeholder="Subject"> 
+                                    <input type="text" name="subject" class="form-control form_style" placeholder="Subject"> 
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class=" form-group mb-0">    
-                                <textarea rows="5" name="message" id="message" class="form-control" placeholder="Message"></textarea>
+                                <textarea rows="5" name="message" class="form-control" placeholder="Message"></textarea>
                                 </div>
                             </div>
                         </div>
-                        <div class="btn_wrapper">          
-                            <button type="submit" name="get_started" onclick="sendMail()">Get Started</button>
+                        <div class="btn_wrapper">                            
+                            <input type="submit" value="Get Started">
+                            <div class="submitting"></div>
+                            <!-- <button type="submit" name="get_started">Get Started</button> -->
                         </div>
                     </form>
                 </div>
